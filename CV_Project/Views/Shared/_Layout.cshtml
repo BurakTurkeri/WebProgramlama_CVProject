@@ -1,0 +1,141 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Burak Türkeri CV</title>
+    <style type="text/css">
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Sans-Serif;
+            line-height: 1.5em;
+        }
+
+        #header {
+            background: #BCCE98;
+            height: 100px;
+        }
+
+            #header h1 {
+                margin: 0;
+                padding-top: 15px;
+            }
+
+        #mainwrapper {
+            overflow: hidden;
+        }
+
+        #contentwrapper {
+            float: left;
+            width: 100%;
+        }
+
+        #content {
+            margin-right: 460px;
+            padding-bottom: 10010px;
+            margin-bottom: -10000px;
+        }
+
+        #rightmenu {
+            float: left;
+            width: 210px;
+            height:510px;
+            padding-bottom: 10010px;
+            margin-bottom: -10000px;
+            margin-left: -210px;
+            background: #DAE9BC;
+        }
+
+        #footer {
+            position:absolute;
+            bottom:0;
+            height:50px;
+            clear: left;
+            width: 100%;
+            background: #BCCE98;
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        .innertube {
+            margin: 15px;
+            margin-top: 0;
+        }
+
+
+        p {
+            color: #555;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ornek {
+            width: 900px;
+            margin: auto;
+        }
+
+        .sola-kaydir {
+            float: left;
+            padding: 0 10px 10px 0;
+        }
+
+            nav ul a {
+                color: darkgreen;
+                text-decoration: none;
+            }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="innertube">
+            <h1>Burak Türkeri-CV</h1>
+
+        </div>
+    </header>
+
+    <div id="mainwrapper">
+
+        <div id="contentwrapper">
+            <div id="content">
+                <div class="innertube">
+                    <div class="ornek">
+                        <h1><img src="~/burak.jpg" class="sola-kaydir" width="150px height="150px" alt="Alternate Text" /></h1>
+                        @RenderBody()
+                    </div>
+                </div>
+        </div>
+            </div>
+
+        <nav id="rightmenu">
+            <div class="innertube">
+                <h3>Menü</h3>
+                <ul>
+                    <li><a href="@Url.RouteUrl("")">Hakkımda</a></li>
+                    <li><a href="@Url.RouteUrl("RSkills")">Yetenekler</a></li>
+                    <li><a href="@Url.RouteUrl("RExperience")">Tecrübeler</a></li>
+                    <li><a href="@Url.RouteUrl("RContactMe")">İletişim</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <footer id="footer">
+        <div class="innertube">
+            &copy; @DateTime.Now.Year www.burakturkeri.net || Tüm hakları saklıdır... .
+        </div>
+    </footer>
+
+</body>
+
+</html>
